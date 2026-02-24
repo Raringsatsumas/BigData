@@ -8,4 +8,4 @@ def es_primo(n):
     
 
 
-print(es_primo(11))
+print(es_primo(10))
