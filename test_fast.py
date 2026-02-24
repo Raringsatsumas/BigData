@@ -1,8 +1,9 @@
-import fast 
+import pytest
+import fast
 
-def test_esPrimo():
-    assert fast.es_primo (4) ==False
-    assert fast.es_primo (2)== True 
-
-
-
+@pytest.mark.parametrize("numero, esperado", [
+    (4, True),
+    (2, True),
+])
+def test_es_primo(numero, esperado):
+    assert fast.es_primo(numero) == esperado
